@@ -2,9 +2,10 @@
 const {id} = Astro.props;
 import briefcase from "../../public/briefcase.svg"
 import ExperienceBox from "./experienceBox.astro";
+import SectionContainer from "./sectionContainer.astro";
 import SectionTittle from "./sectionTittle.astro";
 ---
-<div id={id} class="flex flex-col gap-6 justify-start mt-16 w-11/12 md:w-7/12 lg:w-5/12 rounded-lg  py-6 px-8">
+<SectionContainer id={id} bg={false}>
     <SectionTittle img ={briefcase.src} tittle="Experience"/>
 
     <ol class="relative -z-10 border-s border-gray-200 ml-3">                  
@@ -15,5 +16,4 @@ import SectionTittle from "./sectionTittle.astro";
             Assisted in the <span class="text-blue-600 font-medium">development of applications and websites</span>. Participated in team meetings to understand workflows and <span class="text-blue-600 font-medium">learn key skills</span> such as <span class="text-blue-600">team collaboration</span>, GitHub management, <span class="text-blue-600">JavaScript</span>, and <span class="text-blue-600">CSS3</span>.
         </ExperienceBox>
     </ol>
-</div>
-
+</SectionContainer>
