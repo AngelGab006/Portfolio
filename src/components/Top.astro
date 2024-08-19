@@ -3,9 +3,10 @@ import Badge from "./badge.astro"
 import GithubIcon from "../../public/Github.svg"
 import LinkedIn from "../../public/LinkedIn.svg"
 import Gmail from "../../public/Gmail.svg"
+const {id} = Astro.props;
 ---
 
-<section class="flex flex-col gap-6 justify-start mt-28 w-11/12 md:w-7/12 lg:w-5/12 bg-white rounded-lg shadow-lg py-6 px-8">
+<section id={id} class="flex flex-col gap-6 justify-start mt-28 w-11/12 md:w-7/12 lg:w-5/12 bg-white rounded-lg shadow-lg py-6 px-8">
     <h1 class="text-6xl font-bold text-gray-800">
         Hi, I'm <a class="text-blue-600 hover:text-blue-800 transition-all" href="https://www.linkedin.com/in/angel-gabriel-nu%C3%B1ez-beltre-b00b3425b/" target="_blank">Ángel</a>
     </h1>
