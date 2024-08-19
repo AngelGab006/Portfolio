@@ -2,9 +2,10 @@
 const {id} = Astro.props;
 import briefcase from "../../public/briefcase.svg"
 import ExperienceBox from "./experienceBox.astro";
+import SectionTittle from "./sectionTittle.astro";
 ---
 <div id={id} class="flex flex-col gap-6 justify-start mt-16 w-11/12 md:w-7/12 lg:w-5/12 rounded-lg  py-6 px-8">
-    <h2 class="flex gap-3 text-3xl font-bold text-gray-800 mb-9"><img src={briefcase.src} alt="briefcase" class="size-8" loading="lazy"> <span> Experience </span></h2>
+    <SectionTittle img ={briefcase.src} tittle="Experience"/>
 
     <ol class="relative border-s border-gray-200 dark:border-gray-700">                  
         <ExperienceBox date="2022-Actual" tittle="IT Technician, Papelería Melva">
