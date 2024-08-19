@@ -1,0 +1,10 @@
+---
+const {id} = Astro.props
+import promt from "../../public/promt.svg"
+import SectionContainer from "./sectionContainer.astro"
+import SectionTittle from "./sectionTittle.astro"
+---
+<SectionContainer id={id} bg={false}>
+    <SectionTittle img={promt.src} tittle="About"/>
+    <p>Hello, my name is Ángel Gabriel Núñez Beltré, and I'm a software developer, Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quas deserunt cupiditate nesciunt necessitatibus id laboriosam ducimus eius possimus. Fugit deserunt molestias, cum suscipit eum quasi reprehenderit nemo provident reiciendis.</p>
+</SectionContainer>
