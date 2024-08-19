@@ -1,3 +1,6 @@
+#extensions
+.vscode
+
 # build output
 dist/
 
