@@ -1,0 +1,32 @@
+---
+const {image, tittle, text, linkPage, linkCode} = Astro.props
+import link from "../../public/link.svg"
+import GitHub from "../../public/Github2.svg"
+---
+
+<div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href={linkPage} target="_blank">
+        <img class="rounded-t-lg" src={image} alt="project 1 picture" loading="lazy"/>
+    </a>
+    <div class="p-5">
+        <a href={linkPage} target="_blank">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-balance">{tittle}</h5>
+        </a>
+        <div class="flex mb-2">
+            <slot/>
+        </div>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-pretty">{text}</p>
+        <a href={linkPage} class="cursor-pointer inline-flex gap-2 items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all" target="_blank">
+            <img src={link.src} alt="linkIcon" class="size-5" loading="lazy">
+            Preview
+        </a>
+        {
+            linkCode && (
+                <a href={linkCode} class="cursor-pointer inline-flex gap-2 items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-950 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800 transition-all" target="_blank">
+                    <img src={GitHub.src} alt="GitHubIcon" class="size-5" loading="lazy">
+                    code
+                </a>
+            )
+        }
+    </div>
+</div>

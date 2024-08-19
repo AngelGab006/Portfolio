@@ -1,0 +1,19 @@
+---
+const {id} = Astro.props;
+import DevWave from "../../public/DevWave.webp"
+import promt from "../../public/promt.svg"
+import Badge2 from "./badge2.astro";
+import ProjectCard from "./projectCard.astro";
+import SectionTittle from "./sectionTittle.astro";
+import html from "../../public/html.svg"
+import css from "../../public/css.svg"
+---
+<div id={id} class="flex flex-col gap-6 justify-start mt-16 w-11/12 md:w-7/12 lg:w-5/12 rounded-lg  py-6 px-8">
+    <SectionTittle img={promt.src} tittle="Projects"/>
+    <div class="flex justify-center gap-4 flex-col">
+        <ProjectCard image={DevWave.src} linkCode="https://github.com/AngelGab006/DevWaves" linkPage="https://dev-waves.vercel.app/" tittle="DevWave | Website Project" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, quae? Architecto cupiditate accusamus, error porro temporibus reiciendis enim corrupti autem nostrum id quia provident optio suscipit quibusdam eligendi veritatis labore?">
+            <Badge2 icon={html.src} text="HTML" color="bg-orange-500" />
+            <Badge2 icon={css.src} text="CSS" color="bg-blue-500" />
+        </ProjectCard>
+    </div>
+</div>

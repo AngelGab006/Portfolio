@@ -4,6 +4,7 @@ const { title } = Astro.props;
 import Header from "../components/header.astro"
 import Top from '../components/Top.astro';
 import Experience from '../components/experience.astro';
+import Projects from '../components/projects.astro';
 ---
 
 <!doctype html>
@@ -21,6 +22,7 @@ import Experience from '../components/experience.astro';
 		<Header></Header>
 		<Top></Top>
 		<Experience id="experience"></Experience>
+		<Projects id="projects"></Projects>
 		<slot />
 	</body>
 </html>
