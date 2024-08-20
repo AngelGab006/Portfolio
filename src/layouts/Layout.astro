@@ -7,6 +7,7 @@ import Experience from '../components/experience.astro';
 import Projects from '../components/projects.astro';
 import About from '../components/about.astro';
 import Footer from '../components/footer.astro'
+import logo from '../../public/Logo.png'
 ---
 
 <!doctype html>
@@ -15,7 +16,7 @@ import Footer from '../components/footer.astro'
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href={logo.src} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
