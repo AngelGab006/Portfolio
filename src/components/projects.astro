@@ -9,15 +9,22 @@ import html from "../../public/html.svg"
 import css from "../../public/css.svg"
 import js from "../../public/js.svg"
 import SectionContainer from "./sectionContainer.astro";
+import Notes from "../../public/Notes-Project.webp"
+import Enigmatic from "../../public/Enigmatic.webp"
 ---
 <SectionContainer id={id} bg={false}>
     <SectionTittle img={promt.src} tittle="Projects"/>
-    <div class="flex justify-center gap-4 flex-col">
-        <ProjectCard image={DevWave.src} linkCode="https://github.com/AngelGab006/DevWaves" linkPage="https://dev-waves.vercel.app/" tittle="DevWave | Website Project" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, quae? Architecto cupiditate accusamus, error porro temporibus reiciendis enim corrupti autem nostrum id quia provident optio suscipit quibusdam eligendi veritatis labore?">
+    <div class="flex justify-center gap-4 flex-wrap">
+        <ProjectCard image={DevWave.src} linkCode="https://github.com/AngelGab006/DevWaves" linkPage="https://dev-waves.vercel.app/" tittle="DevWave | Website Project" text="DevWaves is a conceptual platform designed to connect developers with clients through a subscription-based service. Clients can maintain their websites effortlessly while receiving ongoing support from a network of programmers. This project envisions a streamlined approach where clients only need to subscribe to keep their websites running smoothly, with developers readily available to handle all technical aspects.">
             <Badge2 icon={html.src} text="HTML" color="bg-orange-500" />
             <Badge2 icon={css.src} text="CSS" color="bg-blue-500" />
         </ProjectCard>
-        <ProjectCard image={DevWave.src} linkCode="https://github.com/AngelGab006/DevWaves" linkPage="https://dev-waves.vercel.app/" tittle="Notes | Web App Project" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, quae? Architecto cupiditate accusamus, error porro temporibus reiciendis enim corrupti autem nostrum id quia provident optio suscipit quibusdam eligendi veritatis labore?">
+        <ProjectCard image={Notes.src} linkCode="https://github.com/AngelGab006/to-do-list" linkPage="https://to-do-list-one-virid.vercel.app/" tittle="Notes | Web App Project" text="A simple yet visually engaging To-Do List application built to organize tasks efficiently. The app allows users to create, view, and manage their tasks with ease. Each task is color-coded, providing an intuitive interface for quick navigation. Users can search for tasks and get detailed descriptions, making task management straightforward and effective. Built with a modern, clean design, this app is perfect for anyone looking to stay organized.">
+            <Badge2 icon={html.src} text="HTML" color="bg-orange-500" />
+            <Badge2 icon={css.src} text="CSS" color="bg-blue-500" />
+            <Badge2 icon={js.src} text="JavaScript" color="bg-yellow-500" />
+        </ProjectCard>
+        <ProjectCard image={Enigmatic.src} linkCode="https://github.com/AngelGab006/Enigmatic" linkPage="https://enigmatic-seven.vercel.app/" tittle="Enigmatic | Web App Project" text="This cryptography tool is an educational resource to help students learn and practice matrix-based encryption. It allows visualizing message data, experimenting with encryption/decryption, and verifying accuracy - enhancing understanding of cryptographic principles.">
             <Badge2 icon={html.src} text="HTML" color="bg-orange-500" />
             <Badge2 icon={css.src} text="CSS" color="bg-blue-500" />
             <Badge2 icon={js.src} text="JavaScript" color="bg-yellow-500" />
