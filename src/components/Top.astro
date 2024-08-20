@@ -6,15 +6,15 @@ import Gmail from "../../public/Gmail.svg"
 const {id} = Astro.props;
 ---
 
-<section id={id} class="flex flex-col gap-6 justify-start mt-28 sm:w-12/12 w-11/12 md:w-8/12 lg:w-6/12 bg-white rounded-lg shadow-lg py-6 px-8">
-    <h1 class="sm:text-6xl text-4xl font-bold text-gray-800">
-        Hi, I'm <a class="text-blue-600 hover:text-blue-800 transition-all" href="https://www.linkedin.com/in/angel-gabriel-nu%C3%B1ez-beltre-b00b3425b/" target="_blank">Ángel</a>
+<section id={id} class="flex dark:shadow-2xl dark:bg-gray-800 dark:text-gray-200 flex-col gap-6 justify-start mt-28 sm:w-12/12 w-11/12 md:w-8/12 lg:w-6/12 bg-white rounded-lg shadow-lg py-6 px-8">
+    <h1 class="sm:text-6xl text-4xl font-bold text-gray-800 dark:text-white">
+        Hi, I'm <a class="text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-600 transition-all" href="https://www.linkedin.com/in/angel-gabriel-nu%C3%B1ez-beltre-b00b3425b/" target="_blank">Ángel</a>
     </h1>
-    <p class="sm:text-lg text-base text-gray-700 leading-relaxed text-pretty">
-        With over <span class="text-blue-600">a year of professional experience</span> and more than five years of software development expertise, I specialize in building <span class="text-blue-600">powerful websites</span>. I'm based in Santo Domingo, Dominican Republic, and I'm passionate about turning ideas into reality through code. Proficient in <span class="text-blue-600">HTML, CSS, JavaScript, Node.js, Astro, React, Tailwind</span>, and other technologies.
+    <p class="sm:text-lg text-base text-gray-700 leading-relaxed text-pretty dark:text-gray-200">
+        With over <span class="text-blue-600 dark:text-blue-500">a year of professional experience</span> and more than five years of software development expertise, I specialize in building <span class="text-blue-600 dark:text-blue-500">powerful websites</span>. I'm based in Santo Domingo, Dominican Republic, and I'm passionate about turning ideas into reality through code. Proficient in <span class="text-blue-600 dark:text-blue-500">HTML, CSS, JavaScript, Node.js, Astro, React, Tailwind</span>, and other technologies.
     </p>
-    <p class="sm:text-lg text-base text-gray-700 leading-relaxed text-pretty">
-        I'm currently <a class="text-blue-600 underline hover:text-blue-800 transition-all" href="https://www.linkedin.com/in/angel-gabriel-nu%C3%B1ez-beltre-b00b3425b/" target="_blank">open to work</a> opportunities where I can leverage my skills to create impactful solutions. Let's connect and build something great together!
+    <p class="sm:text-lg text-base text-gray-700 leading-relaxed text-pretty dark:text-gray-200">
+        I'm currently <a class="text-blue-600 underline hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-600 transition-all" href="https://www.linkedin.com/in/angel-gabriel-nu%C3%B1ez-beltre-b00b3425b/" target="_blank">open to work</a> opportunities where I can leverage my skills to create impactful solutions. Let's connect and build something great together!
     </p>
 </section>
 <div class="flex flex-wrap gap-4 mt-8 justify-center">
@@ -23,3 +23,10 @@ const {id} = Astro.props;
     <Badge name = "Contact" icon=`${Gmail.src}` url="mailto:angelbeltrea.20@gmail.com?Subject=Hi, Ángel"></Badge>
 </div>
 
+<style>
+    section:is(.dark *){
+        background-color: #22262b;
+        --tw-shadow-color: rgba(168, 167, 167, 0.336);
+        --tw-shadow: var(--tw-shadow-colored);
+    }
+</style>

@@ -11,7 +11,7 @@ import logo from '../../public/Logo.png'
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -20,8 +20,9 @@ import logo from '../../public/Logo.png'
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<div class="absolute -z-10 h-full w-full bg-white"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div></div>
+	<body class="flex flex-col bg-black2">
+																																																																																																																												
+		<div class="absolute -z-10 h-full w-full bg-white bg-black2"><div class="absolute bottom-0 left-0 right-0 top-0 dark:bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] dark:[mask-image:none] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#24292f_70%,transparent_110%)]"></div></div>
 			<Header></Header>
 			<Top id="top"></Top>
 			<Experience id="experience"></Experience>
@@ -36,10 +37,11 @@ import logo from '../../public/Logo.png'
 		color-scheme: light dark;
 		scroll-behavior: smooth;
 	}
+	.bg-black2:is(.dark *){
+		background-color: #24292f;
+	}
 	body{
-		display: flex;
 		align-items: center;
-		flex-direction: column;
   		font-family: 'Onest Variable', sans-serif;
 	}
 	@media(prefers-reduced-motion: reduce){
