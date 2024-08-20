@@ -4,7 +4,7 @@ import link from "../../public/link.svg"
 import GitHub from "../../public/Github2.svg"
 ---
 
-<div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 max-w-96">
     <a href={linkPage} target="_blank">
         <img class="rounded-t-lg" src={image} alt="projectImage" loading="lazy"/>
     </a>
@@ -12,7 +12,7 @@ import GitHub from "../../public/Github2.svg"
         <a href={linkPage} target="_blank">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-balance">{tittle}</h5>
         </a>
-        <div class="flex mb-2">
+        <div class="flex mb-2 flex-wrap">
             <slot/>
         </div>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-pretty">{text}</p>
