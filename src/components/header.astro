@@ -1,5 +1,5 @@
 <header class="sticky min-w-fit top-0 mt-4">
-    <nav class="flex sm:gap-5 rounded-full border-solid py-1 px-3 mt-4 shadow-2xl border-transparent dark:text-white bg-white sm:text-base text-sm gap-3">
+    <nav class="flex sm:gap-5 rounded-full border-solid py-1 px-3 mt-4 shadow-2xl border-transparent dark:text-white sm:text-base text-sm gap-3">
         <a href="#top">Home</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
@@ -13,13 +13,14 @@
         animation: navshadow 1s linear both;
         animation-timeline: scroll();
         animation-range: 0 100px;
+        background-color: rgba(255, 255, 255, 0.7);
     }
     nav:is(.dark *){
         border-width: 1.5px;
         animation: navshadowdark 1s linear both;
         animation-timeline: scroll();
         animation-range: 0 100px;
-        background-color: rgba(0, 0, 0, 0.137);
+        background-color: rgba(36, 41, 47, 0.7);
     }
     @keyframes navshadow {
         100% {
