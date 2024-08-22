@@ -31,6 +31,17 @@ import logo from '../../public/Logo.png'
 		<Footer></Footer>
 	</body>
 </html>
+<script>
+	if (
+	  localStorage.theme === 'dark' ||
+	  (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+	) {
+	  document.documentElement.classList.add('dark');
+	  document.getElementById("computer").style.cssText = "filter: invert(16%) sepia(81%) saturate(2517%) hue-rotate(221deg) brightness(103%) contrast(97%);";
+	} else {
+	  document.documentElement.classList.remove('dark');
+	}
+  </script>
 <style is:global>
 	:root{
 		color-scheme: light dark;
@@ -41,6 +52,7 @@ import logo from '../../public/Logo.png'
 		background-color: #24292f;
 	}
 	body{
+		background-color: white;
 		align-items: center;
   		font-family: 'Onest Variable', sans-serif;
 		display: flex;
