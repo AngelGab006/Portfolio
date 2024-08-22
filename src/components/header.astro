@@ -1,3 +1,8 @@
+---
+import sun from "../../public/sun.svg"
+import moon from "../../public/moon.svg"
+---
+
 <header class="sticky min-w-fit top-0 mt-4">
     <nav class="flex sm:gap-5 rounded-full border-solid py-1 px-3 mt-4 shadow-2xl border-transparent dark:text-white sm:text-base text-sm gap-3">
         <a href="#top">Home</a>
@@ -5,6 +10,23 @@
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="mailto:angelbeltrea.20@gmail.com?Subject=Hi, Ángel" target="_blank">Contact</a>
+        <div class="w-5 sm:w-6 flex justify-center items-center">
+            <button onclick="function changeClass() {
+    const html = document.querySelector(':root');
+    (html.className === 'system' || html.className === 'dark' )? html.className = 'white': html.className = 'dark'
+}changeClass()"
+                  class="h-5 w-5 sm:w-6 sm:h-6  rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <svg class="block dark:hidden toogle" fill="currentColor" viewBox="0 0 20 20">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"  fill="none"  stroke="#24292f"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
+                  </svg>
+                  <svg class="hidden dark:block toogle" fill="none" viewBox="0 0 20 20">
+                    <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none"  stroke="white"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
+                </svg>
+                    <svg class="hidden nontoogle" fill="currentColor" viewBox="0 0 20 20">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none"  stroke="#24292f"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-device-desktop"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z" /><path d="M7 20h10" /><path d="M9 16v4" /><path d="M15 16v4" /></svg>
+                </svg>
+              </button>
+          </div>
     </nav>
 </header>
 <style>
@@ -56,5 +78,14 @@
     a:hover{
         transform: translateY(-1.5px);
         color: rgb(30 64 175);
+    }
+    .toogle:is(.system *){
+        display: none;
+    }
+    .nontoogle:is(.system *){
+        display: block;
+    }
+    .nontoogle{
+        display: none;
     }
 </style>
