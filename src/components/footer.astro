@@ -4,9 +4,9 @@ import LinkedIn from "../../public/LinkedIn.svg"
 import Gmail from "../../public/Gmail.svg"
 ---
 
-<footer class="flex py-5 px-3 mt-7 w-full bg-gray-50">
+<footer class="flex py-5 px-3 mt-7 w-full bg-gray-50 dark:text-white">
     <div class="flex justify-center w-1/2">
-        <h6 class="text-xs">thanks for see my portfolio, this portfolio is inspired by <a class="text-gray-800 hover:text-blue-600 focus:text-blue-800" href="https://porfolio.dev/" target="_blank">@midudev portfolio</a></h6>
+        <h6 class="text-xs">thanks for see my portfolio, this portfolio is inspired by <a class="text-gray-800 hover:text-blue-600 focus:text-blue-800 dark:hover:text-blue-600 dark:focus:text-blue-800 dark:text-gray-400" href="https://porfolio.dev/" target="_blank">@midudev portfolio</a></h6>
     </div>
     <div class="flex gap-4 w-1/2 justify-center px-14">
         <a href="https://github.com/AngelGab006" target="_blank"><img class="sm:w-6 md:w-6 lg:w-6 max-w-6" src={GithubIcon.src} alt="GithubIcon" loading="lazy"></a>
@@ -14,3 +14,11 @@ import Gmail from "../../public/Gmail.svg"
         <a href="mailto:angelbeltrea.20@gmail.com?Subject=Hi, Ángel" target="_blank"><img class="sm:w-6 md:w-6 lg:w-6 max-w-6" src={Gmail.src} alt="Gmail" loading="lazy"></a>
     </div>
 </footer>
+<style>
+    img:is(.dark *){
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(193deg) brightness(99%) contrast(106%);
+    }
+    footer:is(.dark *){
+        background-color: #1a1b1c48;
+    }
+</style>

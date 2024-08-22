@@ -2,4 +2,9 @@
 const {img, tittle} = Astro.props;
 ---
 
-<h2 class="flex gap-3 text-3xl font-bold text-gray-800 mb-4"><img src={img} alt="briefcase" class="size-8" loading="lazy"> <span> {tittle} </span></h2>
+<h2 class="dark:text-white flex gap-3 text-3xl font-bold text-gray-800 mb-4"><img src={img} alt="briefcase" class="size-8" loading="lazy"> <span> {tittle} </span></h2>
+<style>
+    img:is(.dark *){
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(193deg) brightness(99%) contrast(106%);
+    }
+</style>
