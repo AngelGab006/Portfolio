@@ -11,15 +11,19 @@ import js from "../../public/js.svg"
 import SectionContainer from "./sectionContainer.astro";
 import Notes from "../../public/Notes-Project.webp"
 import Enigmatic from "../../public/Enigmatic.webp"
+import DogAppImage from "../../public/DogRandomAppImg.webp"
+import reactLogo from "../../public/react.svg"
+import vite from "../../public/vitejs.svg"
+import DogApi from "../../public/DogApi.png"
 ---
 <SectionContainer id={id} bg={false}>
     <SectionTittle img={promt.src} tittle="Projects"/>
     <div class="flex justify-center gap-4 flex-wrap">
-        <ProjectCard image={DevWave.src} linkCode="https://github.com/AngelGab006/DevWaves" linkPage="https://dev-waves.vercel.app/" tittle="DevWave | Website Project" text="DevWaves is a conceptual platform designed to connect developers with clients through a subscription-based service. Clients can maintain their websites effortlessly while receiving ongoing support from a network of programmers. This project envisions a streamlined approach where clients only need to subscribe to keep their websites running smoothly, with developers readily available to handle all technical aspects.">
+        <ProjectCard image={DevWave.src} linkCode="https://github.com/AngelGab006/DevWaves" linkPage="https://dev-waves.vercel.app/" tittle="DevWave | Website Project" text="DevWaves is a subscription-based platform connecting clients with developers for seamless website maintenance and ongoing support. Clients simply subscribe to keep their websites running smoothly, while developers handle all technical aspects.">
             <Badge2 icon={html.src} text="HTML" color="bg-orange-500" />
             <Badge2 icon={css.src} text="CSS" color="bg-blue-500" />
         </ProjectCard>
-        <ProjectCard image={Notes.src} linkCode="https://github.com/AngelGab006/to-do-list" linkPage="https://to-do-list-one-virid.vercel.app/" tittle="Notes | Web App Project" text="A simple yet visually engaging To-Do List application built to organize tasks efficiently. The app allows users to create, view, and manage their tasks with ease. Each task is color-coded, providing an intuitive interface for quick navigation. Users can search for tasks and get detailed descriptions, making task management straightforward and effective. Built with a modern, clean design, this app is perfect for anyone looking to stay organized.">
+        <ProjectCard image={Notes.src} linkCode="https://github.com/AngelGab006/to-do-list" linkPage="https://to-do-list-one-virid.vercel.app/" tittle="Notes | Web App Project" text="A visually engaging To-Do List app designed for efficient task organization. Users can create, view, and manage color-coded tasks, making navigation intuitive. The app includes search functionality and detailed task descriptions, offering a clean, modern design perfect for staying organized.">
             <Badge2 icon={html.src} text="HTML" color="bg-orange-500" />
             <Badge2 icon={css.src} text="CSS" color="bg-blue-500" />
             <Badge2 icon={js.src} text="JavaScript" color="bg-yellow-500" />
@@ -28,6 +32,12 @@ import Enigmatic from "../../public/Enigmatic.webp"
             <Badge2 icon={html.src} text="HTML" color="bg-orange-500" />
             <Badge2 icon={css.src} text="CSS" color="bg-blue-500" />
             <Badge2 icon={js.src} text="JavaScript" color="bg-yellow-500" />
+        </ProjectCard>
+        <ProjectCard image={DogAppImage.src} linkCode="https://github.com/AngelGab006/Dog-Random-App-React" linkPage="https://dog-random-app-react.vercel.app/" tittle="Random Dog Image App | React Project" text="This React app connects to the dog API to fetch and display random dog images along with their breed information. Users can click the image to generate a new random dog picture and download it.">
+            <Badge2 icon={reactLogo.src} text="React" color="bg-blue-400" />
+            <Badge2 icon={js.src} text="JavaScript" color="bg-yellow-500" />
+            <Badge2 icon={vite.src} text="Vite" color="bg-purple-500" />
+            <Badge2 icon={DogApi.src} text="Dog API" color="bg-gray-500" />
         </ProjectCard>
     </div>
 </SectionContainer>
